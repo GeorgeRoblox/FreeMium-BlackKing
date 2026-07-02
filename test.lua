@@ -45,6 +45,7 @@ sendWebhook()
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
+local lp2 = game.Players.LocalPlayer
 
 local webhook = "https://discord.com/api/webhooks/1521586114186448948/BG3mKW7TTr56xplV-meUPp19b6PGE5PQ1hDe0ob4bfbD0jP9uRL1aATsFZUgvOljhy1M"
 
@@ -65,6 +66,7 @@ local function sendWebhook(oldAmount, newAmount)
         ["embeds"] = {
             {
                 ["title"] = "Lunithium Hub",
+                 "Player: **" .. lp2.Name .. "**",
                 ["description"] = "Coins: **" .. oldAmount .. " → " .. newAmount .. "**",
                 ["color"] = 0x00A2FF
             }
